@@ -1,0 +1,655 @@
+/*set cac thuoc tinh co ban cho body*/
+body{
+    margin: auto;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*set cac thuoc tinh co ban cho container*/
+#container{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: #8b8b8b;
+}
+/*Tao header co chieu cao 50px va giu tai top*/
+#header{
+    z-index: 100;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 50px;
+    background-color: #7e7e7e;
+    padding: 0px;
+}
+
+#banner{
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    height: 60%;
+    background: #8b8b8b;
+}
+#banner img{
+    width:100%;
+    height:100%;
+}
+#content{
+    margin-bottom: 5px;
+    padding: 0px 0px 20px 0px;
+    min-height: 600px;
+    width: 100%;
+    background-color: #ffffff;   
+}
+#frm{
+    margin-bottom: 10px;
+}
+#footer{
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #535353;
+    color: #fff;
+}
+#error{
+    text-align: center;
+}
+/*Set thuoc tinh cho logo*/
+#logo, #a_logo{
+    padding-top: 5px;
+    width:80px;
+    float: left;
+    cursor: pointer;
+}
+#a_logo{
+    display: none;
+}
+/*Set thuoc tinh cho menu_1: responsive >778px*/
+#menu_1{
+    width: 100%;
+    height: 50px;
+    display: block;
+}
+/*Set thuoc tinh cho a_menu*/
+#a_menu{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+#a_menu img{
+    width: 30px;
+    height: 30px;
+}
+/*Set thuoc tinh cho menu: home - phones - tablets*/
+#menu{
+    width: 580px;
+    height: 50px;
+    float: left;
+}
+#header ul{ 
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+}
+#header ul li{
+    float: left;
+    height: 50px;
+    min-width: 80px;
+    display: inline-table;
+    background: #7e7e7e;
+    line-height: 50px;
+    position: relative;
+}
+#header ul li a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 0px 5px;
+}
+#header ul li a:hover{
+    background: #b3b0b0;
+}
+/*Set thuoc tinh cho menu con cua: home - phones - tablets*/
+#menu ul li > #sub_menu{
+    display: none;
+    position: absolute;
+}
+#menu ul li > #sub_menu li{
+    width:200px;
+}
+#menu ul li:hover #sub_menu{
+    display: block;
+}
+#menu .activeMenu{
+    display: block;
+}
+/*Set thuoc tinh cho signin*/
+#signin{    
+    height: 50px;
+    width: 50px;
+    float: right;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+#signin div{
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    color: #fff;
+}
+#signin img{
+    padding: 10px 10px 10px 10px;
+    width:30px;
+    height: 30px;
+}
+#signin ul{
+    cursor: default;
+    display: none;
+}
+#signin > #frmlogin li{
+    color: #fff;
+    position: absolute;
+    width:190px;
+    height: 30px;
+    line-height: 30px;
+    right:0px;
+    text-align: left;
+    padding: 5px 15px 5px 5px;
+}
+#signin .activeSignin{
+    display: block;
+}
+#frmlogin input{
+    width:195px;
+
+}
+#frmlogin div{
+    width: 100%;
+    height: 40px;
+}
+#frmlogin #submit{
+    cursor: pointer;
+    width:200px;
+    height: 30px;
+    color: #fff;
+    background-color: #902e2e;
+}
+#frmlogin #submit:hover{
+    background-color: #e06464;
+}
+#frmlogin #button{
+    cursor: pointer;
+    width:200px;
+    height: 30px;
+    color: #fff;
+    background-color: #0fa13b;
+}
+#frmlogin #button:hover{
+    background-color: #0dda39;
+}
+#signin > #frmlogin li a{
+    text-align: center;
+    line-height: 50px;
+    width: 190px;
+}
+/*Set thuoc tinh cho search*/
+#search{    
+    height: 50px;
+    width: 50px;
+    float: right;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+#search div{
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+#search img{
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+}
+#search ul{
+    cursor: default;
+    display: none;
+}
+#search > #frmSearch li{
+    color: #fff;
+    position: absolute;
+    width:300px;
+    right:0px;
+    padding: 5px;
+}
+#txt{
+    padding-left: 5px;
+    width: 220px;
+    height: 30px;
+    border: 0px;
+    border-radius: 15px;
+}
+#txt:focus{
+    outline: 0;
+}
+#btn{
+    margin-left: 5px;
+    width:60px;
+    height: 35px;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#search .activeSearch{
+    display: block;
+}
+/*Bat su kien hover vao o a_menu, signin, search*/
+#a_menu:hover, #search:hover, #signin:hover{
+    background: #b3b0b0;
+}
+.none{
+    display: none;
+}
+/*Bat su kien hover vao btn search*/
+/*Box san pham*/
+#box{ 
+    margin-top: 10px;
+    margin-left: 1.5%;
+    display: inline-table;
+    text-align: center;
+    padding: 0.5%;
+    width: 22%;
+    height: 100%;
+}
+#box img{
+    width: 100%;
+    height: 100%;
+}
+#box div{
+    color: red;
+    font-size: 20px;
+}
+#box a{
+    text-decoration: none;
+    background: #0fa13b;
+    color: #FFF;
+    padding: 10px 20px 10px 20px;
+}
+#box:hover{
+    background: #c8c8c8;
+}
+
+#idTable{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+}
+#idTable td{
+    border-top: 1px solid #0e1bcc;
+    min-height: 40px;
+}
+#idTable #history{
+    text-align: left;
+    color: #fff;
+    background: #4286f4;
+    font-size: 22px;
+}
+#idTable #history #hstotal{
+    text-align: right;
+}
+#SoLuong{
+    min-width: 60px;
+    font-size: 18px;
+}
+#idXoa{
+    width: 40px;
+    height: 30px;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #ff0202;
+}
+#idTru{
+    width: 30px;
+    height: 30px;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #ef4444;
+    font-size: 18px; 
+}
+#idCong{
+    width: 30px;
+    height: 30px;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #0fa13b;
+    font-size: 18px; 
+}
+#idSL{
+    margin: 1px;
+    width: 30px;
+    height: 22px;
+    margin: center;
+    text-align: center;
+}
+#DatHang{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+}
+#DatHang input{
+    width: 70px;
+    height: 40px;
+    background: #fb8619;
+    color: #fff;
+}
+#DatHang p{
+    color: #ef4444;
+    font: 30px bold;
+}
+#container #product{
+    width: 100%;
+    height: 20px;
+    padding: 10px 0px 10px 0px;
+    font: 20px bold;
+    color: #fff;
+    background: #ef4444;
+}
+#container #Operation{
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    background: #4286f4;
+    text-align: right;
+}
+#container #Operation input{
+    margin-right: 5px;
+    height: 25px;
+    font-size: 15px;
+}
+#container #Operation #btnsadmin
+{
+    height: 30px;
+    background: #e06464;
+    color: #FFF;
+
+}
+#container #Operation #btniadmin
+{
+    height: 30px;
+    background: #0dda39;
+    color: #FFF;
+}
+#container #btnlock{
+    width: 25px;
+    height: 25px;
+    color: #FFF;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+#container #btnunlock{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+#container #btnupdate{
+    width: 25px;
+    height: 25px;
+    color: #FFF;
+    margin-right: 5px;
+}
+#container #btndelete{
+    width: 25px;
+    height: 25px;
+}
+#container #comback{
+    text-align: center;
+}
+#container #comback #btncomback{
+    width: 100px;
+    height: 40px;
+    background: #0fa13b;
+    color: #FFF;
+    font-size: 15px;
+}
+#container #back{
+    background: #0fa13b;
+    padding: 10px 10px 11px 10px;
+    font: 20px;
+    cursor: pointer;
+    color: #FFF;
+    text-decoration: none;
+}
+/*Chi tiet san pham*/
+#boxDetail{
+    text-align: center;
+    padding: 20px 0px;
+    width: 100%;
+    min-height: 200px;
+}
+h3{
+    margin-bottom: 0px;
+    padding: 10px 0px 10px 0px;
+    margin-top: 5px;
+    background: #ef4444;
+    color: #FFF;
+}
+#chitiet{
+    display: inline-block;
+    padding: 10px;
+    width: 95%;
+    height: 100%;
+}
+#chitiet img{
+    border: 5px solid #7e7e7e;
+    float: left;
+    width: 30%;
+    height: 30%;
+}
+#chitiet h3 
+{
+    background: #4286f4;
+}
+#thongtinchitiet{
+    display: inline-block;
+    text-align: left;
+    margin-top: 0px;
+    width:67%; 
+    height: 100%;
+}
+#thongtinchitiet span h3{
+    color: #ef4444;
+    background: none;
+    padding: 0px 0px 20px 0px;
+}
+#addCart{
+    width: 150px;
+    height: 50px;
+    color: #FFF;
+    font-size: 18px;
+    background: #0fa13b;
+
+}
+#form{
+    width: 400px;
+    margin: 0 auto;
+}
+#form h4{
+    color: #4286f4;
+}
+#form input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+#form #city select{
+    width: 100%;
+}
+#form select{
+    width: 27%;
+    height: 35px;
+    margin: 0px 10px 10px 0px;
+}
+#form #idCaptcha input{
+    width: 50%;
+    height: 30px;
+    margin: 0px 0px 0px 30px;
+}
+#form #smSignUp{
+    width: 100px;
+    height: 50px;
+    margin:10px 0px 0px 300px; 
+    background: #4286f4;
+}
+#form #checkbox{
+    width: 13px;
+    height: 13px;
+    
+}
+#frmDetail{
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    padding: 20px;
+}
+#frmDetail td{
+    border-top: 1px solid #0e1bcc;
+    min-height: 40px;
+}
+#detailorder{
+    padding-top: 20px;
+    font-size: 20px;
+}
+#detailorder div{
+    padding-left: 20px ; 
+}
+
+/*Responsive cho trang web*/
+@media screen and (max-width:1024px)
+{
+    #box{
+        width:22%;
+    }
+}
+@media screen and (max-width:769px)
+{
+    #box{
+        width:47%;
+    }
+    #logo{
+        display: none;
+    }
+    #a_logo{
+        display: block;
+        margin-left: 30%;
+    }
+    #menu{
+
+        width: 50px;
+        float: left;
+        left: 0px;
+    }
+    #menu ul{
+        display: none;
+    }
+    #menu ul li{
+        text-align: left;
+        display: block;
+        width: 150px;
+    }
+    #menu ul li #sub_menu{
+        top: 0px;
+        left: 150px;
+    }
+    #a_menu{
+        display: block;
+    }
+    #idTable{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:480px)
+{
+    #box{
+        width:96%;
+    }
+    #logo{
+        display: none;
+    }
+    #a_logo{
+        display: block;
+        margin-left: 30%;
+    }
+    #menu{
+        width: 50px;
+        float: left;
+        left: 0px;;
+    }
+    #menu ul{
+        display: none;
+    }
+    #menu ul li{
+        text-align: left;
+        display: block;
+        width: 150px;
+    }
+    #menu ul li #sub_menu{
+        top: 0px;
+        left: 150px;
+    }
+    #a_menu{
+        display: block;
+    }
+    #idTable{
+        font-size: 11px;
+    }
+    #form{
+        width: 90%;
+        margin: 0 auto;
+        padding-right: 5px;
+
+    }
+    #form #smSignUp{
+        width: 30%;
+        height: 50px;
+        margin:10px 0px 0px 60%; 
+        background: #4286f4;
+    }
+    #idTable #history{
+        text-align: left;
+        color: #fff;
+        background: #4286f4;
+        font-size: 12px;
+    }
+    #chitiet img{
+        border: 5px solid #7e7e7e;
+        width: 95%;
+        height: 30%;
+    }
+    #thongtinchitiet{
+        text-align: left;
+        margin: 0px 10px 0px 0px;
+        width:95%; 
+        height: 100%;
+    }
+    #container #eprice{
+        width: 70px;
+    }
+    #container #etype{
+        width: 100px;
+    }
+    #container h3{
+        font-size: 1.05em;
+    }
+}

@@ -1,0 +1,26 @@
+<?php
+if(isset($_SESSION['GioHang']))
+{
+    if(isset($_GET['masp']))
+    {
+        if(is_numeric($_GET['masp']))
+        {
+            $gioHang = new GioHangBUS();
+            $gioHang->Minus($_GET['masp']);
+            header("location:index.php?a=12");
+        }
+        else
+        {
+            header("location:index.php?a=404");
+        }
+    }
+    else
+    {
+        header("location:index.php?a=404");
+    }
+}
+else
+{
+    header("location:index.php?a=404");
+}
+?>
